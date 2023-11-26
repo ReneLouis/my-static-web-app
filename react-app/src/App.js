@@ -5,9 +5,10 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { HeaderBar, NavBar, NotFound } from './components';
 import About from './About';
+import Footer from './components/footer/Footer';
 
 const Products = withRouter(
-  lazy(() => import(/* webpackChunkName: "products" */ './products/Products'))
+  lazy(() => import(/* webpackChunkName: "products" */ './products/Products')),
 );
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
               </Switch>
             </Suspense>
           </main>
+          <Footer />
         </div>
       </div>
     );
